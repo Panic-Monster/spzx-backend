@@ -1,0 +1,29 @@
+package com.jayson.spzx.model.entity.system;
+
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.jayson.spzx.model.entity.base.BaseEntity;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+@EqualsAndHashCode(callSuper = true)
+@Data
+@Schema(description = "角色实体类")
+@TableName(value = "sys_role")
+public class SysRole extends BaseEntity {
+
+    private static final long serialVersionUID = 1L;
+
+    @Schema(description = "角色名称")
+    @TableField("role_name")
+    private String roleName;
+
+    @Schema(description = "角色编码")
+    @TableField("role_code")
+    private String roleCode;
+
+    @Schema(description = "描述")
+    private String description;
+
+}
